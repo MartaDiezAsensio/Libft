@@ -1,7 +1,8 @@
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
-int	ft_strlcpy(char *dst, const char *src, int	dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, int	dstsize)
 {
 	int	i;
 
@@ -17,3 +18,13 @@ int	ft_strlcpy(char *dst, const char *src, int	dstsize)
 		i++;
 	return (i);
 }
+
+/*int	main()
+{
+	char	dst[] = "hello world";
+	char	src[] = "bye hello hello";
+	int		dstsize = 10;
+
+	printf("%lu\n", ft_strlcpy(dst, src, dstsize));
+	printf("%lu", strlcpy(dst, src, dstsize));
+}*/

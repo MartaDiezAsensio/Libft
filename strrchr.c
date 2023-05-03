@@ -17,7 +17,7 @@ char	*ft_strrchr(char *s, int c)
 			res = &s[i];
 		i++;
 	}
-	if (s[i] == '\0' && c == '\0')
+	if ((char)s[i] == '\0' && c == '\0')
 	{
 		return (&s[i]);
 	}
@@ -25,10 +25,10 @@ char	*ft_strrchr(char *s, int c)
 }
  
 
-/*int	main()
+int	main()
 {
 	char	s[] = "hello world";
 	int		c = 'f';
 	printf("%s\n", ft_strrchr(s, c));
 	printf("%s", strrchr(s, c));
-}*/
+}

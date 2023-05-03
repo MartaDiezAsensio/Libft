@@ -1,9 +1,10 @@
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
-int ft_strlen(char *s)
+size_t ft_strlen(char *s)
 {
-    int i;
+    size_t i;
 
     i = 0;
     while (s[i] != '\0')
@@ -11,20 +12,30 @@ int ft_strlen(char *s)
     return (i);
 }
 
-int	ft_strlcat(char *dst, const char *src, int	dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t	dstsize)
 {
-	int	i;
-	int	len_dst;
+	size_t	i;
+	size_t	len_dst;
 
 	i = 0;
 	len_dst = ft_strlen(dst);
-	if (dstsize == 0 || len_dst > dstsize)
+	if (dstsize == 0)
 		return (0);
-	while (((i + len_dst) < dstsize) && (src))
+	while ((dst) && (src[i] != '\0'))
 	{
-		dst[len_dst + i] = src[i];
+		dst[dstsize + i] = src[i];
 		i++;
 	}
-	dst[len_dst + i] = '\0';
-	return (len_dst + i);
+	dst[dstsize + i] = '\0';
+	return (dstsize + i);
 }
+
+/*int	main()
+{
+	char	dst[] = "hello hello";
+	char	src[] = "bye";
+	int		dstsize = 2;
+
+	printf("%lu\n", ft_strlcat(dst, src, dstsize));
+	printf("%lu", strlcat(dst, src, dstsize));
+}*/
