@@ -1,8 +1,6 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-int ft_strlen(char *s)
+/*int ft_strlen(char *s)
 {
     int i;
 
@@ -10,13 +8,13 @@ int ft_strlen(char *s)
     while (s[i] != '\0')
         i++;
     return (i);
-}
+}*/
 
 char	*ft_strnstr(char *haystack, char *needle, int len)
 {
 	int	i;
 	int	j;
-	int	count;
+	size_t	count;
 
 	i = 0;
 	j = 0;

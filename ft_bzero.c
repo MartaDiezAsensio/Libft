@@ -2,24 +2,17 @@
 #include <stdio.h>
 #include <string.h>
 
-void	ft_bzero(void *s, size_t n)
+void *ft_bzero(void *s, size_t len)
 {
 	size_t	i;
-	size_t	ptr[n];
-
+	
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
-		ptr[i] = 0;
+		((unsigned char*)s)[i] = '0';
 		i++;
 	}
-	s = &ptr;
-	i = 0;
-	/*while (i < n)
-	{
-		printf("%lu\n", ptr[i]);
-		i++;
-	}*/
+	return (s);
 }
 
 /*int	main()
