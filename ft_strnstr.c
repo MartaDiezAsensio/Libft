@@ -1,14 +1,14 @@
 #include "libft.h"
 
-/*int ft_strlen(char *s)
+size_t ft_strlen(char *s)
 {
-    int i;
+    size_t i;
 
     i = 0;
     while (s[i] != '\0')
         i++;
     return (i);
-}*/
+}
 
 char	*ft_strnstr(char *haystack, char *needle, int len)
 {
@@ -38,7 +38,7 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 	return (NULL);
 }
 
-/*int	main()
+int	main()
 {
 	char	haystack[] = "I found the needle in the haystack";
 	char	needle[] = "needle";
@@ -46,4 +46,4 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 
 	printf("%s\n", ft_strnstr(haystack, needle, len));
 	printf("%s", strnstr(haystack, needle, len));
-}*/
+}

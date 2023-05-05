@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 size_t ft_strlen(char *s)
 {
@@ -32,12 +33,11 @@ char    *ft_itoa(int val, char *str, int base)
         dig--;
     }
     return (str);
-	free(str);
 }
 
 void    ft_putnbr_fd(int n, int fd)
 {
-    char *str;
+    char str[] = "12345";
 	int	len;
 
 	len = ft_strlen(ft_itoa(n, str, 10));
