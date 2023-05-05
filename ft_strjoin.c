@@ -1,6 +1,10 @@
-#include "libft.h"
+//#include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-size_t ft_strlen(char *s)
+size_t ft_strlen(char const *s)
 {
     size_t i;
 
@@ -10,12 +14,12 @@ size_t ft_strlen(char *s)
     return (i);
 }
 
-char *ft_strjoin(char *s1, char *s2)
+char *ft_strjoin(char const *s1, char *s2)
 {
-	int	ls1;
-	int	ls2;
-	int	i;
-	int	j;
+	size_t	ls1;
+	size_t	ls2;
+	size_t	i;
+	size_t	j;
 
 	ls1 = ft_strlen(s1);
 	ls2 = ft_strlen(s2);
