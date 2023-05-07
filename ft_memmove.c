@@ -2,24 +2,24 @@
 #include <stdio.h>
 #include <string.h>
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    size_t           i;
-    unsigned char    aux[len];
+	size_t			i;
+	unsigned char	aux[len];
 
-    i = 0;
-    while (i < len)
-    {
-        aux[i] = ((unsigned char *)src)[i];
-        i++;
-    }
-    i = 0;
-    while (i < len)
-    {
-        ((unsigned char *)dst)[i] = aux[i];
-        i++;
-    }
-    return (dst);
+	i = 0;
+	while (i < len)
+	{
+		aux[i] = ((unsigned char *)src)[i];
+		i++;
+	}
+	i = 0;
+	while (i < len)
+	{
+		((unsigned char *)dst)[i] = aux[i];
+		i++;
+	}
+	return (dst);
 }
 
 int	main()

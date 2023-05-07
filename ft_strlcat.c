@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include <string.h>
 
-size_t ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
-    size_t i;
+	size_t i;
 
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return (i);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
 
 size_t	ft_strlcat(char *dst, const char *src, size_t	dstsize)

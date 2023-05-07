@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 
-void *ft_bzero(void *s, size_t len)
+void	*ft_bzero(void *s, size_t len)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (i < len)
 	{

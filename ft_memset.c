@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
 	
