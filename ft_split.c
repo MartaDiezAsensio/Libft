@@ -6,63 +6,60 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:34:21 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/07 22:39:32 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*size_t ft_strlen(const char *s)
+/*size_t	ft_strlen(const char *s)
 {
-    size_t i;
-
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return (i);
-}
-
-void *ft_bzero(void *s, size_t len)
-{
-	size_t	i;
-	
-	i = 0;
-	while (i < len)
-	{
-		((unsigned char*)s)[i] = '0';
-		i++;
-	}
-	return (s);
-}
-
-char **ft_split(char *s, char c)
-{
-	size_t	i;
-	size_t	pos;
-	char	**str;
+	size_t i;
 
 	i = 0;
-	pos = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}*/
+
+
+char	**ft_split(char *s, char c)
+{
+	char	*arr[2];
+	char	**array;
+
+	int	i;
+	int	j;
+	int	len;
+
+	i = 0;
+	j = 0;
+	len = ft_strlen(s);
+	while (s[i] != c)
+		i++;
+	arr[0] = (char *)malloc(i * sizeof(char) + 1);
+	arr[1] = (char *)malloc((len - i) * sizeof(char) + 1);
+	while (j < i)
 	{
-		if (s[i] == c)
-			pos = i;
+		arr[0][j] = s[j];
+		j++;
+	}
+	arr[0][j] = '\0';
+	i = 0;
+	while ((i + j) < len)
+	{
+		arr[1][i] = s[i + j];
 		i++;
 	}
-	*str[0] = (char)malloc(pos);
-	*str[1] = (char)malloc(ft_strlen(s) - pos);
-
-	printf("%zu", pos);
-
-
-	free(str);
-	return (str);
+	arr[1][i] = '\0';
+	array = arr;
+	return(array);
 }
 
-int	main()
+/*int	main()
 {
-	char	s[] = "HelloBye";
-	char	c = 'o';
+    char    s[] = "HelloBye";
+    char    c = 'o';
 
-	ft_split(s, c);
+    ft_split(s, c);
 }*/
