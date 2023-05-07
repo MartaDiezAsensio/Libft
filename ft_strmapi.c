@@ -1,6 +1,6 @@
 #include "libft.h"
 
-size_t ft_strlen(char *s)
+static size_t ft_strlen(char *s)
 {
 	size_t i;
 
@@ -10,7 +10,7 @@ size_t ft_strlen(char *s)
 	return (i);
 }
 
-char	printnstr(unsigned int n, char c)
+static char	printnstr(unsigned int n, char c)
 {
 	printf("%c", c + n);
 	return (c + n);

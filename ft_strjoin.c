@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-size_t	ft_strlen(char const *s)
+static size_t	ft_strlen(char const *s)
 {
 	size_t i;
 

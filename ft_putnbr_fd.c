@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-size_t	ft_strlen(char *s)
+static size_t	ft_strlen(char *s)
 {
 	size_t i;
 

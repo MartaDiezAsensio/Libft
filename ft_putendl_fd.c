@@ -1,6 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
-size_t	ft_strlen(char *s)
+static size_t	ft_strlen(char *s)
 {
 	size_t i;
 

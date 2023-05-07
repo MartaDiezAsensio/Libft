@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void	printnstr(unsigned int n, char *str)
+static void	printnstr(unsigned int n, char *str)
 {
 	unsigned int	i;
 
