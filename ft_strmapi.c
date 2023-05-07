@@ -6,27 +6,11 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:04 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:35 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/07 21:01:57 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t ft_strlen(char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-static char	printnstr(unsigned int n, char c)
-{
-	printf("%c", c + n);
-	return (c + n);
-}
 
 char *ft_strmapi(char *s, char (*f)(unsigned int, char))
 {

@@ -6,13 +6,13 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:50 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:29 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/07 20:42:05 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strlen(char *s)
+/*size_t	ft_strlen(char *s)
 {
 	size_t i;
 
@@ -20,7 +20,7 @@ static size_t	ft_strlen(char *s)
 	while (s[i] != '\0')
 		i++;
 	return (i);
-}
+}*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t	dstsize)
 {

@@ -6,21 +6,11 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:46 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:27 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/07 20:48:36 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_strlen(char const *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
 
 char *ft_strjoin(char const *s1, char *s2)
 {

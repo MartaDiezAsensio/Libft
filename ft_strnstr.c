@@ -6,21 +6,11 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:14 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:38 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/07 20:49:20 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t ft_strlen(char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strnstr(char *haystack, char *needle, int len)
 {

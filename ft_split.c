@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:19 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/07 20:34:21 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
     while (s[i] != '\0')
         i++;
     return (i);
-}*/
+}
 
-/*void *ft_bzero(void *s, size_t len)
+void *ft_bzero(void *s, size_t len)
 {
 	size_t	i;
 	
@@ -33,7 +33,7 @@
 		i++;
 	}
 	return (s);
-}*/
+}
 
 char **ft_split(char *s, char c)
 {
@@ -65,4 +65,4 @@ int	main()
 	char	c = 'o';
 
 	ft_split(s, c);
-}
+}*/

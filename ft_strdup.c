@@ -6,28 +6,18 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:36 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:23 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/07 20:56:00 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strlen(char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-static char	*ft_strcpy(char *dst, const char *src)
+static char	*ft_strcpy(char *dst, char 	*src)
 {
 	int	i;
 
 	i = 0;
-	while (i < ft_strlen(src))
+	while (src)
 	{
 		dst[i] = src[i];
 		i++;
@@ -36,7 +26,7 @@ static char	*ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(char *s1)
 {
 	char *ptr = (char *)malloc(ft_strlen(s1) + 1);
 	if (ptr == NULL)

@@ -6,13 +6,13 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:36 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:00 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/07 20:59:45 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(void *s, int c, size_t n)
 {
 	size_t	i;
 
