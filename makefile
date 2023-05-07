@@ -6,7 +6,7 @@
 #    By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 14:23:45 by mdiez-as          #+#    #+#              #
-#    Updated: 2023/05/07 20:19:01 by mdiez-as         ###   ########.fr        #
+#    Updated: 2023/05/07 20:25:43 by mdiez-as         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ OBJS = $(addprefix $(OBJS_DIR), $(addsufix .o $(FILES)))
 	$(CC) $(FLAGS) -c -o $@ $<
 
 $(NAME) : $(OBJS)
-	$(AR) $(NAME) $^
+	$(AR) $@ $^
 
 all: $(NAME)
 
