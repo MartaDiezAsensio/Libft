@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/07 20:22:14 by mdiez-as          #+#    #+#             */
+/*   Updated: 2023/05/07 20:23:38 by mdiez-as         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t ft_strlen(char *s)
@@ -38,7 +50,7 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 	return (NULL);
 }
 
-int	main()
+/*int	main()
 {
 	char	haystack[] = "I found the needle in the haystack";
 	char	needle[] = "needle";
@@ -46,4 +58,4 @@ int	main()
 
 	printf("%s\n", ft_strnstr(haystack, needle, len));
 	printf("%s", strnstr(haystack, needle, len));
-}
+}*/

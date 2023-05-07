@@ -1,6 +1,16 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/07 20:21:15 by mdiez-as          #+#    #+#             */
+/*   Updated: 2023/05/07 20:23:14 by mdiez-as         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 static size_t	ft_strlen(char *s)
 {
@@ -12,7 +22,7 @@ static size_t	ft_strlen(char *s)
 	return (i);
 }
 
-char	*ft_itoa(int val, char *str, int base)
+static char	*ft_itoa(int val, char *str, int base)
 {
 	int	dig;
 	int	num;

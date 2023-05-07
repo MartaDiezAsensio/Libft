@@ -3,39 +3,53 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mdiez-as <mdiez-as@student.42barcel>       +#+  +:+       +#+         #
+#    By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 14:23:45 by mdiez-as          #+#    #+#              #
-#    Updated: 2023/05/05 15:36:36 by mdiez-as         ###   ########.fr        #
+#    Updated: 2023/05/07 20:19:01 by mdiez-as         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
-					ft_strlcat.c ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c \
-					ft_itoa.c ft_memcpy.c  ft_putendl_fd.c ft_strchr.c  ft_strlcpy.c \
-					ft_strnstr.c ft_tolower.c ft_bzero.c   ft_isascii.c ft_memcpy.c \
-					ft_memmove.c ft_putnbr_fd.c  ft_strdup.c  ft_strlen.c  ft_strrchr.c \
-					ft_toupper.c ft_calloc.c  ft_isdigit.c ft_memchr.c  ft_memset.c  \
-					ft_putstr_fd.c  ft_strjoin.c ft_strmapi.c ft_strtrim.c
+HDR = libft.h
 
-OBJS = $(SRC:.c=.o)
+RM = rm -f
+
+AR = ar rcs
+
+CC = gcc
 
 FLAGS = -Wall -Wextra -Werror
 
+FILES			=	ft_isalnum ft_isprint ft_memcmp  ft_putchar_fd ft_split \
+					ft_strlcat ft_strncmp ft_substr ft_atoi ft_isalpha.c \
+					ft_itoa ft_memcpy  ft_putendl_fd ft_strchr  ft_strlcpy \
+					ft_strnstr ft_tolower ft_bzero   ft_isascii ft_memcpy \
+					ft_memmove ft_putnbr_fd  ft_strdup  ft_strlen  ft_strrchr \
+					ft_toupper ft_calloc  ft_isdigit ft_memchr  ft_memset  \
+					ft_putstr_fd  ft_strjoin ft_strmapi ft_strtrim
+
+SRCS_DIR = ./
+SRCS = $(addprefix $(SRCS_DIR), $(addsufix .c, $(FILES)))
+ 
+OBJS_DIR = ./
+OBJS = $(addprefix $(OBJS_DIR), $(addsufix .o $(FILES)))
+
+.c.o: $(SRCS)
+	$(CC) $(FLAGS) -c -o $@ $<
+
+$(NAME) : $(OBJS)
+	$(AR) $(NAME) $^
+
 all: $(NAME)
 
-$(NAME):
-	cc $(FLAGS) $(SRCS) -o $(NAME)
-
-norm:
-	norminette -R CheckForbiddenSourceHeader
-
 clean:
-	/bin/rm -f *.o
+	$(RM) $(OBJS)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	$(RM) $(NAME)
 
-re: fclean $(NAME)
+re: clean all
+
+.PHONY: all clean fclean re

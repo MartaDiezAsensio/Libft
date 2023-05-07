@@ -1,8 +1,16 @@
-//#include "libft.h"
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/07 20:21:46 by mdiez-as          #+#    #+#             */
+/*   Updated: 2023/05/07 20:23:27 by mdiez-as         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 static size_t	ft_strlen(char const *s)
 {
@@ -43,10 +51,10 @@ char *ft_strjoin(char const *s1, char *s2)
 	return (str);
 }
 
-int	main()
+/*int	main()
 {
 	char s1[] = "hello";
 	char s2[] = " bye";
 
 	printf("%s", ft_strjoin(s1, s2));
-}
+}*/

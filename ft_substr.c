@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/07 20:22:28 by mdiez-as          #+#    #+#             */
+/*   Updated: 2023/05/07 20:23:42 by mdiez-as         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
@@ -17,11 +29,11 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-int	main()
+/*int	main()
 {
 	char s[] = "hello hello";
 	unsigned int start = 3;
 	size_t len = 5;
 
 	printf("%s", ft_substr(s, start, len));
-}
+}*/

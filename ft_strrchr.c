@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/07 20:22:19 by mdiez-as          #+#    #+#             */
+/*   Updated: 2023/05/07 20:23:39 by mdiez-as         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(char *s, int c)
@@ -23,10 +35,10 @@ char	*ft_strrchr(char *s, int c)
 }
  
 
-int	main()
+/*int	main()
 {
 	char	s[] = "hello world";
 	int		c = 'f';
 	printf("%s\n", ft_strrchr(s, c));
 	printf("%s", strrchr(s, c));
-}
+}*/

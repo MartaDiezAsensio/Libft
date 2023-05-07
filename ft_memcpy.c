@@ -1,6 +1,16 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/07 20:20:49 by mdiez-as          #+#    #+#             */
+/*   Updated: 2023/05/07 20:23:04 by mdiez-as         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -18,7 +28,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-int	main()
+/*int	main()
 {
 	char	dst[20];
 	char	*src;
@@ -27,4 +37,4 @@ int	main()
 
 	src = text;
 	ft_memcpy(dst, src, n);
-}
+}*/
