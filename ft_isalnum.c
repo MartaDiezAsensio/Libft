@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:12 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 21:39:10 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/08 11:18:16 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,13 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+
+/*int	main()
+{
+	int i = '0';
+    while (i <= '9')
+    {
+        printf("%d", ft_isalnum(i));
+        i++;
+    }
+}*/
