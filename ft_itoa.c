@@ -6,62 +6,56 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:33 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 21:45:33 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 21:56:28 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_digits(long int nb)
+{
+	int	c;
+
+	c = 0;
+	if (nb < 0)
+	{
+		nb *= -1;
+		c++;
+	}
+	while (nb > 0)
+	{
+		nb /= 10;
+		c++;
+	}
+	return (c);
+}
+
 char	*ft_itoa(int n)
 {
-	int		dig;
-	int		num;
-	char	*str;
+	char		*str;
+	int			i;
+	long int	num;
 
-	dig = 0;
 	num = n;
+	i = ft_digits(num);
+	if (!(str = malloc(i * sizeof(char) + 1)))
+		return (0);
+	str[i--] = '\0';
+	if (num == 0)
+	{
+		str = ft_calloc(2, sizeof(char));
+		str[0] = '0';
+	}
 	if (num < 0)
-		num = -num;
+	{
+		str[0] = '-';
+		num *= -1;
+	}
 	while (num > 0)
 	{
+		str[i--] = num % 10 + '0';
 		num /= 10;
-		dig++;
 	}
-	if (n < 0)
-	{
-		str = (char *)malloc((dig + 2) * sizeof(char));
-		str[0] = '-';
-		str[dig + 1] = '\0';
-		n = -n;
-		while (dig > 0)
-		{
-			str[dig] = (n % 10) + '0';
-			n /= 10;
-			dig--;
-		}
-	}
-	else
-	{
-		if (dig == 0)
-		{
-			str = (char *)malloc((dig + 2) * sizeof(char));
-			str[dig + 1] = '\0';
-			str[dig] = '0';
-		}
-		else
-		{
-			str = (char *)malloc((dig + 1) * sizeof(char));
-			str[dig] = '\0';
-			dig--;
-			while (dig >= 0)
-			{
-				str[dig] = (n % 10) + '0';
-				n /= 10;
-				dig--;
-			}
-		}
-	}
-	free (str);
 	return (str);
 }
 
