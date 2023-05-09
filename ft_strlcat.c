@@ -6,43 +6,50 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:50 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 11:22:47 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 13:03:09 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*size_t	ft_strlen(const char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}*/
-
-size_t	ft_strlcat(char *dst, const char *src, size_t	dstsize)
+/*size_t	ft_strlcat(char *dst, const char *src, size_t	dstsize)
 {
 	size_t	i;
-	size_t	j;
 	size_t	len_dst;
 
 	i = 0;
-	j = 0;
 	len_dst = ft_strlen(dst);
-	while ((j < dstsize) && (src[i] != '\0'))
+	if (dstsize <= len_dst)
+		return (ft_strlen(src) + dstsize);
+	while (((i + 1) < dstsize) && (src[i] != '\0'))
 	{
-		dst[len_dst + i] = src[i];
+		dst[len_dst] = src[i];
 		i++;
+		len_dst++;
+	}
+	dst[len_dst] = '\0';
+	return (len_dst + ft_strlen(&src[len_dst]));
+}*/
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	while (dst[i] && i < size)
+		i++;
+	while (src[j] && (i + j + 1) < size)
+	{
+		dst[i + j] = src[j];
 		j++;
 	}
-	dst[len_dst + i] = '\0';
-	if (ft_strlen(src) > dstsize)
-		return (ft_strlen(src)+ dstsize);
-	else
-		return (len_dst + i);
+	if (i < size)
+		dst[i + j] = '\0';
+	return (i + ft_strlen(src));
 }
+
 
 /*int	main()
 {
