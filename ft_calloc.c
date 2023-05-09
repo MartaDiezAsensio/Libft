@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:08 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:58:32 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 20:04:09 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,15 @@ void	*ft_calloc(size_t count, size_t size)
 
 	i = 0;
 	j = 0;
-	while (i < count)
+	ptr = (size_t*)malloc(count * size * sizeof(size_t));
+	if (ptr == NULL)
+		return (NULL);
+	while ( j < size * count)
 	{
-		ptr = (size_t*)malloc(size * sizeof(size_t));
-		while ( j < size)
-		{
-			ptr[j] = 0;
-			j++;
-		}
-		if (ptr == NULL)
-			return (0);
-		i++;
-		j = 0;
+		ptr[j] = 0;
+		j++;
 	}
+	ptr[j] = 0;
 	return (ptr);
 }
 
@@ -42,4 +38,5 @@ void	*ft_calloc(size_t count, size_t size)
   size_t size = 2;
   
   ft_calloc(count, size);
+  calloc(count, size);
 }*/

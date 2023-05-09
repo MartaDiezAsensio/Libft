@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:14 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 19:41:26 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 21:01:19 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 {
 	char	haystack[] = "lorem ipsum dolor sit amet";
 	char	needle[] = "dolor";
-	int		len = 15;
+	int		len = 35;
 
 	printf("%s\n", ft_strnstr(haystack, needle, len));
 	printf("%s", strnstr(haystack, needle, len));

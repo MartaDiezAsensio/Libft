@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:33 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:22:58 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 20:20:18 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ char	*ft_itoa(int val, char *str, int base)
 	return (str);
 }
 
-int    main()
+/*int    main()
 {
     int val = 5786345;
     char str[10];
     int base = 10;
 
     printf("%s", ft_itoa(val, str, base));
-}
+}*/

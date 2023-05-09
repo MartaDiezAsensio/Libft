@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:54 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:06 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 20:58:44 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 /*int	main()
 {
-	char	dst[] = "abcdefg";
-	char	text[] = "abcdefg";
-	size_t	n = 5;
+	char	*dst = NULL;
+	char	*text = NULL;
+	size_t	n = 0;
 
 	ft_memmove(dst, text, n);
 }*/

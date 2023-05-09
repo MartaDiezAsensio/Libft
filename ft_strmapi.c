@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:04 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 21:01:57 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 20:51:21 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,20 @@
 char *ft_strmapi(char *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char			*str = (char *)malloc(ft_strlen(s) * sizeof(char));
-
-	i = 0;
+	char			*str;
+	
+	if (!s)
+		return (0);
+	str = (char *)malloc((ft_strlen(s) + 1)* sizeof(char));
 	if (str == NULL)
-		return (NULL);
+		return (0);
+	i = 0;
 	while (s[i] != '\0')
 	{
-		str[i] = (*f)(i, s[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	free(str);
+	str[i] = '\0';
 	return (str);
 }
 
