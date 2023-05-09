@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:09 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 18:47:00 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 22:10:02 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_strncmp(const char *s1, const char *s2, int n)
 	i = 0;
 	if ( n == 0)
 		return (0);
-	while ((s1) && (s2) && (i < n - 1) && (s1[i] == s2[i]))
+	while ((s1[i]) && (s2[i]) && (i < n - 1) && (s1[i] == s2[i]))
 		i++;
 	return (s1[i] - s2[i]);
 }
