@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:55 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:32 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:27:56 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlen(const char *s)
 
 /*int main()
 {
-    char    s[] = "I am Marta";
+    char    s[] = "";
     printf("%lu\n", ft_strlen(s));
 	printf("%lu", strlen(s));
 }*/

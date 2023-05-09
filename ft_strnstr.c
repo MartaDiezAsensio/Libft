@@ -6,11 +6,21 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:14 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:49:20 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:41:26 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*size_t	ft_strlen(const char *s)
+{
+	size_t i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}*/
 
 char	*ft_strnstr(char *haystack, char *needle, int len)
 {
@@ -21,6 +31,8 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 	i = 0;
 	j = 0;
 	count = 1;
+	if (ft_strlen(needle) == 0)
+		return (haystack);
 	while (haystack[j] != '\0' && j < len)
 	{
 		while (needle[i] != '\0')
@@ -42,9 +54,9 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 
 /*int	main()
 {
-	char	haystack[] = "I found the needle in the haystack";
-	char	needle[] = "needle";
-	int		len = 20;
+	char	haystack[] = "lorem ipsum dolor sit amet";
+	char	needle[] = "dolor";
+	int		len = 15;
 
 	printf("%s\n", ft_strnstr(haystack, needle, len));
 	printf("%s", strnstr(haystack, needle, len));
