@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:40:55 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 00:58:40 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 01:06:34 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ size_t	ft_strlen(const char *s);
 char 	*ft_strmapi(char *s, char (*f)(unsigned int, char));
 int		ft_strncmp(const char *s1, const char *s2, int n);
 char	*ft_strnstr(char *haystack, char *needle, int len);
-char	*ft_strrchr(char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 char 	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
