@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:36 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:59:45 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:07:02 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,25 @@
 void	*ft_memchr(void *s, int c, size_t n)
 {
 	size_t	i;
+	unsigned char	*str;
+	unsigned char	ch;
 
+	str = (unsigned char *)s;
+	ch = (unsigned char) c;
 	i = 0;
-	if (s == NULL)
-		return (NULL);
-	while ( i < n)
+	while (i < n)
 	{
-		if (((unsigned char *)s)[i] == (unsigned char)c)
-			return (s);
+		if (*str == ch)
+			return (str);
 		i++;
+		str++;
 	}
 	return (NULL);
 }
 
 /*int	main()
 {
-	char	s[] = "hello world";
+	char	s[] = "bonjour";
 	int		c = 'o';
-	size_t n = 10;
-	
-	ft_memchr(s, c, n);
-	printf("%s", &s);
+	size_t n = 7;
 }*/

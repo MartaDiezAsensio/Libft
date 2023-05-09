@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:19 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:39 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 18:08:20 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,15 @@ char	*ft_strrchr(char *s, int c)
 	int		i;
 
 	i = 0;
-	res = NULL;
-	if (c == 0 || s == NULL)
-		return (NULL);
+	res = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == (char)c)
 			res = &s[i];
 		i++;
 	}
-	if ((char)s[i] == '\0' && c == '\0')
-	{
+	if (c == '\0')
 		return (&s[i]);
-	}
 	return (res);
 }
  
