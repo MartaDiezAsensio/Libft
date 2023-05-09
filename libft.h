@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:40:55 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/08 13:40:56 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/09 21:17:50 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 
-char	*ft_itoa(int val, char *str, int base);
+char	*ft_itoa(int n);
 void	*ft_memchr(void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
