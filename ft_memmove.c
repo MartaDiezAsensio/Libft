@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:54 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 20:58:44 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 14:42:18 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,13 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t			i;
-	unsigned char	aux[len];
+	unsigned char	*aux;
 
 	i = 0;
+	if (!(aux = (unsigned char *)malloc(len * sizeof(char))))
+		return (NULL);
+	if (dst == NULL && src == NULL)
+		return (0);
 	while (i < len)
 	{
 		aux[i] = ((unsigned char *)src)[i];
@@ -34,9 +38,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 /*int	main()
 {
-	char	*dst = NULL;
-	char	*text = NULL;
-	size_t	n = 0;
-
-	ft_memmove(dst, text, n);
+	ft_memmove(((void *)0), ((void *)0), 5);
+	memmove(((void *)0), ((void *)0), 5);
 }*/
