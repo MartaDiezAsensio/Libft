@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:48:46 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/08 12:59:17 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:09:24 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 	return (i);
 }*/
 
-size_t	ft_strlcpy(char *dst, const char *src, int	dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, int dstsize)
 {
 	int	i;
 

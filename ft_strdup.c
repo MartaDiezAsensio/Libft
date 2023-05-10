@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:36 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 20:12:22 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:18:24 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 	return (i);
 }*/
 
-static char	*ft_strcpy(char *dst, char 	*src)
+static char	*ft_strcpy(char *dst, char *src)
 {
 	int	i;
 
@@ -38,7 +38,9 @@ static char	*ft_strcpy(char *dst, char 	*src)
 
 char	*ft_strdup(char *s1)
 {
-	char *ptr = (char *)malloc(ft_strlen(s1) + 1);
+	char	*ptr;
+
+	ptr = (char *)malloc(ft_strlen(s1) + 1);
 	if (ptr == NULL)
 		return (NULL);
 	ft_strcpy(ptr, s1);

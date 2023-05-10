@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:23 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/08 11:17:57 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:17:44 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,20 @@
 
 int	ft_isdigit(int c)
 {
-	int	dig;
 	int	val;
 	int	res;
 
-	dig = 0;
-	val =c ;
+	val = c ;
 	res = 0;
-	while (c > 0)
-	{
-		c = c / 10;
-		dig ++;
-	}
 	if (val >= '0' && val <= '9')
 		res = 1;
 	else
 	{
 		while (val > 0)
 		{
-			if ((val%10) >= 0 && (val%10) <= 9)
+			if ((val % 10) >= 0 && (val % 10) <= 9)
 				res = 0;
-			else 
+			else
 				res = 1;
 			val /= 10;
 		}

@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:50 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 17:43:04 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:08:45 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
-
 
 /*int	main()
 {

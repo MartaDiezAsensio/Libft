@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:08 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 22:03:52 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 14:49:25 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
-	
-	if (!(ptr = (char *)malloc(count * size)))
+
+	ptr = (char *)malloc(count * size);
+	if (!(ptr))
 		return (NULL);
 	return (ft_memset(ptr, 0, size * count));
 }

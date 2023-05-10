@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:14 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 14:04:14 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:12:48 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@
 
 char	*ft_strnstr(char *haystack, char *needle, int len)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	size_t	count;
 
 	i = 0;

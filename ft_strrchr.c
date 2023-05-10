@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:19 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 01:25:18 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:13:03 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 		return (aux);
 	return (res);
 }
- 
+
 /*int	main()
 {
 	char	s[] = "hello world";

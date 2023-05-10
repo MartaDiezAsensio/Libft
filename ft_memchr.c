@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:36 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 19:07:02 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 14:59:51 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*str;
 	unsigned char	ch;
 

@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:15 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 00:59:15 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:02:36 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,3 @@ void	ft_putnbr_fd(int n, int fd)
 
 	ft_putnbr_fd(n, fd);
 }*/
-
