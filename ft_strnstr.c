@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:14 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 21:01:19 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:51:17 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 
 	i = 0;
 	j = 0;
-	count = 1;
 	if (ft_strlen(needle) == 0)
 		return (haystack);
 	while (haystack[j] != '\0' && j < len)
 	{
-		while (needle[i] != '\0')
+		count = 1;
+		while (needle[i] != '\0' && ((j + i) < len))
 		{
 			if (haystack[j + i] == needle[i])
 			{
@@ -46,7 +46,6 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 			i++;
 		}
 		i = 0;
-		count = 0;
 		j++;
 	}
 	return (NULL);
@@ -56,7 +55,7 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 {
 	char	haystack[] = "lorem ipsum dolor sit amet";
 	char	needle[] = "dolor";
-	int		len = 35;
+	int		len = 25;
 
 	printf("%s\n", ft_strnstr(haystack, needle, len));
 	printf("%s", strnstr(haystack, needle, len));

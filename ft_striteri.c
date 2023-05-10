@@ -6,13 +6,13 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:41 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/07 20:23:25 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 11:57:21 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	printnstr(unsigned int n, char *str)
+/*static void	ft_printnstr(unsigned int n, char *str)
 {
 	unsigned int	i;
 
@@ -22,23 +22,23 @@ static void	printnstr(unsigned int n, char *str)
 		printf("%c", str[i]);
 		i++;
 	}
-}
+}*/
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
 	i = 0;
-	while(s[i] != '\0')
+	while(s[i])
 	{
-		(*f)(i, &s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
 
 /*int	main()
 {
-	char	s[] = "hello";
+	char	s[] = "this is a test";
 
-	ft_striteri(s, printnstr);
+	ft_striteri(s, ft_printnstr);
 }*/

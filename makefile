@@ -6,7 +6,7 @@
 #    By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 14:23:45 by mdiez-as          #+#    #+#              #
-#    Updated: 2023/05/07 20:40:00 by mdiez-as         ###   ########.fr        #
+#    Updated: 2023/05/10 11:57:02 by mdiez-as         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ FILES			=	ft_isalnum ft_isprint ft_memcmp  ft_putchar_fd ft_split \
 					ft_strnstr ft_tolower ft_bzero   ft_isascii ft_memcpy \
 					ft_memmove ft_putnbr_fd  ft_strdup  ft_strlen  ft_strrchr \
 					ft_toupper ft_calloc  ft_isdigit ft_memchr  ft_memset  \
-					ft_putstr_fd  ft_strjoin ft_strmapi ft_strtrim
+					ft_putstr_fd  ft_strjoin ft_strmapi ft_strtrim ft_striteri
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
