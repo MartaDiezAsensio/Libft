@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:14 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 13:51:17 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/10 14:04:14 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 		return (haystack);
 	while (haystack[j] != '\0' && j < len)
 	{
-		count = 1;
+		count = 0;
 		while (needle[i] != '\0' && ((j + i) < len))
 		{
 			if (haystack[j + i] == needle[i])
@@ -53,9 +53,9 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 
 /*int	main()
 {
-	char	haystack[] = "lorem ipsum dolor sit amet";
-	char	needle[] = "dolor";
-	int		len = 25;
+	char	haystack[] = "see FF your FF";
+	char	needle[] = "see FF your FF";
+	int		len = 40;
 
 	printf("%s\n", ft_strnstr(haystack, needle, len));
 	printf("%s", strnstr(haystack, needle, len));
