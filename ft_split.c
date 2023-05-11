@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 14:56:25 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/11 14:21:33 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,70 @@ char	**ft_split(char *s, char c)
 	return(array);
 }
 
+
+int	ft_accurences(char *str, char ch)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == ch)
+			count++;
+		i++;
+	}
+	return (count);
+}
+
+void	**mem_alloc(char *str, char ch)
+{
+	int		i;
+	int		j;
+	int		index;
+	char	**ptr;
+
+	i = 0;
+	index = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == ch)
+		{
+			j = 0;
+			while (str[j] != ch)
+				j++;
+			ptr[index++] = (char *)malloc((j - 1) * sizeof(char) + 1);
+		}
+		i++;
+	}
+	return (ptr);
+}
+
+
+int main()
+{
+	int	rows;
+	int cols;
+
+	rows = 3;
+	cols = 5;
+
+	int *rw;
+	int *co;
+
+	rw = &rows;
+	co = &cols;
+
+	int **table;
+
+	table = rows * cols;
+
+}
+
 /*int	main()
 {
-    char    s[] = "HelloBye";
+    char    s[] = "Hello How are you?";
     char    c = 'o';
 
     ft_split(s, c);
