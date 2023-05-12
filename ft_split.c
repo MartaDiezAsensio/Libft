@@ -6,121 +6,87 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/11 14:21:33 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/12 20:42:30 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*size_t	ft_strlen(const char *s)
+char	*ft_strndup(const char *s, size_t n)
 {
-	size_t i;
+	size_t	i;
+	char	*str;
 
 	i = 0;
-	while (s[i] != '\0')
+	str = NULL;
+	if (n == 0)
+		return (NULL);
+	str = (char *)malloc((n + 1) * sizeof(char));
+	if (!(str))
+		return (NULL);
+	while (i < n)
+	{
+		str[i] = s[i];
 		i++;
-	return (i);
-}*/
+	}
+	str[i] = '\0';
+	return (str);
+}
 
-
-char	**ft_split(char *s, char c)
+char	**ft_freeall(char **list)
 {
-	char	*arr[2];
-	char	**array;
+	size_t	j;
 
-	int	i;
-	int	j;
-	int	len;
+	j = 0;
+	while(list[j])
+	{
+		free(list[j]);
+		j++;
+	}
+	free(list);
+	return (NULL);
+}
+
+size_t	ft_wordcount(char const *s, char c)
+{
+	size_t	listsize;
+	size_t	i;
+
+	i = 0;
+	listsize = 0;
+	while (s[i] != '\0')
+	{
+		if ((i == 0 && s[i] != c) || \
+		(s[i] == c && s[i + 1] != '\0' && s[i + 1] != c))
+			listsize++;
+		i++;
+	}
+	return (listsize);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**strlist;
+	size_t	i;
+	size_t	j;
+	size_t	save;
 
 	i = 0;
 	j = 0;
-	len = ft_strlen(s);
-	while (s[i] != c)
-		i++;
-	arr[0] = (char *)malloc(i * sizeof(char) + 1);
-	arr[1] = (char *)malloc((len - i) * sizeof(char) + 1);
-	while (j < i)
+	strlist = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
+	if (!(strlist))
+		return (NULL);
+	while (i < ft_wordcount(s, c) && s[j] != '\0')
 	{
-		arr[0][j] = s[j];
-		j++;
+		while (s[j] == c)
+			j++;
+		save = j;
+		while (s[j] != c && s[j] != '\0')
+			j++;
+		strlist[i] = ft_strndup(&s[save], j - save);
+		if (strlist[i++] == NULL)
+			return (ft_freeall(strlist));
 	}
-	arr[0][j] = '\0';
-	i = 0;
-	while ((i + j) < len)
-	{
-		arr[1][i] = s[i + j];
-		i++;
-	}
-	arr[1][i] = '\0';
-	array = arr;
-	return(array);
+	strlist[i] = NULL;
+	return (strlist);
 }
-
-
-int	ft_accurences(char *str, char ch)
-{
-	int	i;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == ch)
-			count++;
-		i++;
-	}
-	return (count);
-}
-
-void	**mem_alloc(char *str, char ch)
-{
-	int		i;
-	int		j;
-	int		index;
-	char	**ptr;
-
-	i = 0;
-	index = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == ch)
-		{
-			j = 0;
-			while (str[j] != ch)
-				j++;
-			ptr[index++] = (char *)malloc((j - 1) * sizeof(char) + 1);
-		}
-		i++;
-	}
-	return (ptr);
-}
-
-
-int main()
-{
-	int	rows;
-	int cols;
-
-	rows = 3;
-	cols = 5;
-
-	int *rw;
-	int *co;
-
-	rw = &rows;
-	co = &cols;
-
-	int **table;
-
-	table = rows * cols;
-
-}
-
-/*int	main()
-{
-    char    s[] = "Hello How are you?";
-    char    c = 'o';
-
-    ft_split(s, c);
-}*/

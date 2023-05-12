@@ -6,7 +6,7 @@
 #    By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 14:23:45 by mdiez-as          #+#    #+#              #
-#    Updated: 2023/05/10 11:57:02 by mdiez-as         ###   ########.fr        #
+#    Updated: 2023/05/12 20:23:41 by mdiez-as         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,11 +36,11 @@ SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
 OBJS_DIR = ./
 OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 
-%.o:  %.c
-	$(CC) $(FLAGS) -c -o $@ $<
+%.o:  %.c $(HDR)
+	$(CC) $(FLAGS) -c -o $@ $< 
 
-$(NAME) : $(OBJS)
-	$(AR) $@ $^
+$(NAME) : $(OBJS) 
+	$(AR) $@ $^ 
 
 all: $(NAME)
 

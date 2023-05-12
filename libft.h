@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:40:55 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 15:22:48 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/12 20:41:20 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
-char	**ft_split(char *s, char c);
+char	**ft_split(const char *s, char c);
 char	*ft_strchr(char *s, int c);
 
 char	*ft_strdup(char *s1);
