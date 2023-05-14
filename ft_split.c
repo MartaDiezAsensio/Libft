@@ -6,87 +6,95 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/12 20:42:30 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/14 16:58:22 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strndup(const char *s, size_t n)
+static int	count_rows(const char *str, char c)
 {
-	size_t	i;
-	char	*str;
+	int	i;
+	int	flag;
 
 	i = 0;
-	str = NULL;
-	if (n == 0)
-		return (NULL);
-	str = (char *)malloc((n + 1) * sizeof(char));
-	if (!(str))
-		return (NULL);
-	while (i < n)
+	flag = 0;
+	while (*str)
 	{
-		str[i] = s[i];
+		if (*str != c && flag == 0)
+		{
+			flag = 1;
+			i++;
+		}
+		else if (*str == c)
+			flag = 0;
+		str++;
+	}
+	return (i);
+}
+
+static int	count_cols(char const *str, char c, int i)
+{
+	int	len;
+
+	len = 0;
+	while (str[i] != c && str[i])
+	{
+		len++;
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	return (len);
 }
 
-char	**ft_freeall(char **list)
+static void	ft_free(char **arr, int j)
 {
-	size_t	j;
-
-	j = 0;
-	while(list[j])
-	{
-		free(list[j]);
-		j++;
-	}
-	free(list);
-	return (NULL);
+	while (j-- > 0)
+		free(arr[j]);
+	free(arr);
 }
 
-size_t	ft_wordcount(char const *s, char c)
+char	**ft_split(char const *str, char c)
 {
-	size_t	listsize;
-	size_t	i;
+	int		i;
+	int		j;
+	int		size;
+	int		words;
+	char	**arr;
 
 	i = 0;
-	listsize = 0;
-	while (s[i] != '\0')
-	{
-		if ((i == 0 && s[i] != c) || \
-		(s[i] == c && s[i + 1] != '\0' && s[i + 1] != c))
-			listsize++;
-		i++;
-	}
-	return (listsize);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**strlist;
-	size_t	i;
-	size_t	j;
-	size_t	save;
-
-	i = 0;
-	j = 0;
-	strlist = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
-	if (!(strlist))
+	j = -1;
+	words = count_rows(str, c);
+	arr = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!(arr))
 		return (NULL);
-	while (i < ft_wordcount(s, c) && s[j] != '\0')
+	while (++j < words)
 	{
-		while (s[j] == c)
-			j++;
-		save = j;
-		while (s[j] != c && s[j] != '\0')
-			j++;
-		strlist[i] = ft_strndup(&s[save], j - save);
-		if (strlist[i++] == NULL)
-			return (ft_freeall(strlist));
+		while (str[i] == c)
+			i++;
+		size = count_cols(str, c, i);
+		arr[j] = ft_substr(str, i, size);
+		if (!(arr[j]))
+		{
+			ft_free(arr, j);
+			return (NULL);
+		}
+		i += size;
 	}
-	strlist[i] = NULL;
-	return (strlist);
+	arr[j] = 0;
+	return (arr);
 }
+
+/*int main()
+{
+  char  *str = "Hola que tal";
+  char  c = ' ';
+
+  char	**arr = ft_split(str, c);
+  int i = 0;
+
+  while (i < count_rows(str, c))
+  {
+	printf("%s\n", arr[i]);
+	i++;
+  }
+}*/

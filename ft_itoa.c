@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:33 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 19:09:06 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/14 18:43:36 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	ft_digits(long int nb)
 	int	c;
 
 	c = 0;
+	if (nb == 0)
+		return(1);
 	if (nb < 0)
 	{
 		nb *= -1;
@@ -38,14 +40,11 @@ char	*ft_itoa(int n)
 
 	num = n;
 	i = ft_digits(num);
+	if( num == 0)
+		return ft_strdup("0");
 	if (!(str = malloc(i * sizeof(char) + 1)))
 		return (0);
 	str[i--] = '\0';
-	if (num == 0)
-	{
-		str = ft_calloc(2, sizeof(char));
-		str[0] = '0';
-	}
 	if (num < 0)
 	{
 		str[0] = '-';
