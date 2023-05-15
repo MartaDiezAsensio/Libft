@@ -6,50 +6,87 @@
 #    By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 14:23:45 by mdiez-as          #+#    #+#              #
-#    Updated: 2023/05/12 20:23:41 by mdiez-as         ###   ########.fr        #
+#    Updated: 2023/05/15 20:41:42 by mdiez-as         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME	      = libft.a
 
-HDR = libft.h
+CC		= gcc
+CFLAG	      = -Wall -Wextra -Werror
 
-RM = rm -f
+RM		= rm -f
 
-AR = ar rcs
+AR		= ar
+ARFLAGS       = crs
 
-CC = gcc
+INCLUDES	= ./libft.h 
 
-FLAGS = -Wall -Wextra -Werror
+SRCS_1	=       ft_strlen.c		\
+		  ft_strlcpy.c		\
+		  ft_strlcat.c		\
+		  ft_strchr.c		\
+		  ft_strnstr.c		\
+		  ft_strncmp.c		\
+		  ft_strdup.c		\
+		  ft_strrchr.c		\
+		  ft_memset.c		\
+		  ft_memcpy.c		\
+		  ft_memmove.c		\
+		  ft_memchr.c		\
+		  ft_memcmp.c		\
+		  ft_bzero.c		\
+		  ft_atoi.c		\
+		  ft_calloc.c		\
+		  ft_isalnum.c		\
+		  ft_isalpha.c		\
+		  ft_isascii.c		\
+		  ft_isdigit.c		\
+		  ft_isprint.c		\
+		  ft_strdup.c		\
+		  ft_tolower.c		\
+		  ft_toupper.c		\
+			
+SRCS_2	=       ft_substr.c		\
+		  ft_strjoin.c		\
+		  ft_strtrim.c		\
+		  ft_split.c		\
+		  ft_strmapi.c		\
+		  ft_itoa.c		\
+		  ft_putchar_fd.c	\
+		  ft_putstr_fd.c	\
+		  ft_putendl_fd.c	\
+		  ft_putnbr_fd.c	\
 
-FILES			=	ft_isalnum ft_isprint ft_memcmp  ft_putchar_fd ft_split \
-					ft_strlcat ft_strncmp ft_substr ft_atoi ft_isalpha \
-					ft_itoa ft_memcpy  ft_putendl_fd ft_strchr  ft_strlcpy \
-					ft_strnstr ft_tolower ft_bzero   ft_isascii ft_memcpy \
-					ft_memmove ft_putnbr_fd  ft_strdup  ft_strlen  ft_strrchr \
-					ft_toupper ft_calloc  ft_isdigit ft_memchr  ft_memset  \
-					ft_putstr_fd  ft_strjoin ft_strmapi ft_strtrim ft_striteri
+SRCS_BN =       ft_lstnew.c		\
+		  ft_lstsize.c		\
+		  ft_lstadd_front.c	\
+		  ft_lstadd_back.c	\
 
-SRCS_DIR = ./
-SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
- 
-OBJS_DIR = ./
-OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
+SRCS	= $(SRCS_1)			\
+	  $(SRCS_2)			\
 
-%.o:  %.c $(HDR)
-	$(CC) $(FLAGS) -c -o $@ $< 
+OBJS	= $(SRCS:.c=.o)
 
-$(NAME) : $(OBJS) 
-	$(AR) $@ $^ 
+OBJS_BONUS = $(SRCS_BN:.c=.o)
 
-all: $(NAME)
+all : $(NAME)
 
-clean:
-	$(RM) $(OBJS)
+%.o : %.c
+	$(CC) $(CFLAG) -c $< -o $@
 
-fclean: clean
-	$(RM) $(NAME)
+clean :
+	$(RM) $(RMFLAG) $(OBJS) $(OBJS_BONUS)
 
-re: clean all
+fclean : clean
+	$(RM) $(RMFLAG) $(NAME)
 
-.PHONY: all clean fclean re
+re : fclean all
+
+$(NAME) : $(OBJS)
+	$(AR) $(ARFLAGS) $@ $^
+
+bonus : $(OBJS) $(OBJS_BONUS)
+	$(AR) $(ARFLAGS) $(NAME) $^
+
+ .PHONY : all clean fclean re
