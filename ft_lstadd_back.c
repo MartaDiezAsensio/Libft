@@ -6,13 +6,13 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 19:45:20 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/15 20:55:49 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/15 21:40:29 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+/* void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	while (lst)
 	{
@@ -21,4 +21,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 		}
 	}
-}
+} */

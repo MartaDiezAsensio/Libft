@@ -6,7 +6,7 @@
 #    By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 14:23:45 by mdiez-as          #+#    #+#              #
-#    Updated: 2023/05/15 20:41:42 by mdiez-as         ###   ########.fr        #
+#    Updated: 2023/05/15 21:53:31 by mdiez-as         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ SRCS_2	=       ft_substr.c		\
 		  ft_putstr_fd.c	\
 		  ft_putendl_fd.c	\
 		  ft_putnbr_fd.c	\
+		  ft_striteri.c
 
 SRCS_BN =       ft_lstnew.c		\
 		  ft_lstsize.c		\
