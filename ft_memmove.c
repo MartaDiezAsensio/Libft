@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:54 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/14 18:43:21 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/16 18:16:36 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 /*int	main()
 {
-	char	src[50] = "thi\xc3\x9f \xc3\x9f\xde\xad\xbe\xeftri\xc3\xb1g will be \xc3\xb8v\xc3\x\xa9d !\r\n";
+	char	src[50] = "xc3\xb8v\xc3\x\xa9d !\r\n";
 	char	dst[50];
 
 	ft_memmove(dst, src, 5);

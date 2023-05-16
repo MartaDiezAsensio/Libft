@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:14 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 15:12:48 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/16 18:17:14 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,16 @@
 	return (i);
 }*/
 
-char	*ft_strnstr(char *haystack, char *needle, int len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 	size_t	count;
 
 	i = 0;
 	j = 0;
 	if (ft_strlen(needle) == 0)
-		return (haystack);
+		return ((char *)haystack);
 	while (haystack[j] != '\0' && j < len)
 	{
 		count = 0;
@@ -41,7 +41,7 @@ char	*ft_strnstr(char *haystack, char *needle, int len)
 			{
 				count++;
 				if (count == ft_strlen(needle))
-					return (&haystack[j]);
+					return ((char *)&haystack[j]);
 			}
 			i++;
 		}

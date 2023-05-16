@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:28 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 15:13:19 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/16 18:11:26 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 
+	str = NULL;
 	if (!s)
 		return (0);
 	if (ft_strlen(s) < start)
