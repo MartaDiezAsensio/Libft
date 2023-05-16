@@ -6,23 +6,24 @@
 #    By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 14:23:45 by mdiez-as          #+#    #+#              #
-#    Updated: 2023/05/15 22:17:50 by mdiez-as         ###   ########.fr        #
+#    Updated: 2023/05/16 18:44:48 by mdiez-as         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	      = libft.a
+NAME	= libft.a
 
 CC		= gcc
-CFLAG	      = -Wall -Wextra -Werror
+CFLAG	= -Wall -Wextra -Werror
 
 RM		= rm -f
 
 AR		= ar
-ARFLAGS       = crs
+
+ARFLAGS	= crs
 
 INCLUDES	= ./libft.h 
 
-SRCS_1	=       ft_strlen.c		\
+SRCS_1	=  ft_strlen.c		\
 		  ft_strlcpy.c		\
 		  ft_strlcat.c		\
 		  ft_strchr.c		\
@@ -36,7 +37,7 @@ SRCS_1	=       ft_strlen.c		\
 		  ft_memchr.c		\
 		  ft_memcmp.c		\
 		  ft_bzero.c		\
-		  ft_atoi.c		\
+		  ft_atoi.c			\
 		  ft_calloc.c		\
 		  ft_isalnum.c		\
 		  ft_isalpha.c		\
@@ -47,7 +48,7 @@ SRCS_1	=       ft_strlen.c		\
 		  ft_tolower.c		\
 		  ft_toupper.c		\
 			
-SRCS_2	=       ft_substr.c		\
+SRCS_2	= ft_substr.c		\
 		  ft_strjoin.c		\
 		  ft_strtrim.c		\
 		  ft_split.c		\
@@ -59,13 +60,19 @@ SRCS_2	=       ft_substr.c		\
 		  ft_putnbr_fd.c	\
 		  ft_striteri.c
 
-SRCS_BN =       ft_lstnew.c		\
-		  ft_lstsize.c		\
+SRCS_BN = ft_lstnew.c		\
 		  ft_lstadd_front.c	\
+		  ft_lstsize.c		\
+		  ft_lstlast.c	\
 		  ft_lstadd_back.c	\
+		  ft_lstdelone.c	\
+		  ft_lstclear.c	\
+		  ft_lstiter.c	\
+		  ft_lstmap.c	\
+
 
 SRCS	= $(SRCS_1)			\
-	  $(SRCS_2)			\
+	  $(SRCS_2)				\
 
 OBJS	= $(SRCS:.c=.o)
 
