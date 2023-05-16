@@ -6,7 +6,7 @@
 #    By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 14:23:45 by mdiez-as          #+#    #+#              #
-#    Updated: 2023/05/16 18:44:48 by mdiez-as         ###   ########.fr        #
+#    Updated: 2023/05/16 19:08:07 by mdiez-as         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,11 +65,6 @@ SRCS_BN = ft_lstnew.c		\
 		  ft_lstsize.c		\
 		  ft_lstlast.c	\
 		  ft_lstadd_back.c	\
-		  ft_lstdelone.c	\
-		  ft_lstclear.c	\
-		  ft_lstiter.c	\
-		  ft_lstmap.c	\
-
 
 SRCS	= $(SRCS_1)			\
 	  $(SRCS_2)				\
@@ -80,7 +75,7 @@ OBJS_BONUS = $(SRCS_BN:.c=.o)
 
 all : $(NAME)
 
-%.o : %.c
+%.o : %.c $(INCLUDES)
 	$(CC) $(CFLAG) -c $< -o $@
 
 clean :

@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 19:45:20 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/16 18:59:55 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/16 19:50:31 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *aux;
+	t_list	*aux;
 
-	if (!(*lst))
+	if (lst)
 	{
-		*lst = new;
+		if (*lst)
+		{
+			aux = ft_lstlast(*(lst));
+			aux->next = new;
+		}
+		else
+			*lst = new;
 	}
-	aux = ft_lstlast(*(lst));
-	aux->next = new;
 }

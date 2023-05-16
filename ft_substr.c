@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:28 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/16 18:11:26 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/16 20:00:03 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = 0;
 	if (ft_strlen(s + start) < len)
 		len = (ft_strlen(s + start));
-	str = (char *)malloc((len + 1) * sizeof(char));
+	str = (char *)malloc((len + 1) * sizeof(*s));
 	if (str == NULL)
 		return (0);
 	ft_strlcpy(str, s + start, len + 1);
