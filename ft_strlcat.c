@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:50 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 15:08:45 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:37:18 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
-
-/*int	main()
-{
-	char	dest[15];
-	
-	dest[11] = 'a';
-    printf("%lu", ft_strlcat(dest, "lorem", 15));
-    write(1, "\n", 1);
-    write(1, dest, 15);
-}*/

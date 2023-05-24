@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:36 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 14:59:51 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:35:21 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,3 @@ void	*ft_memchr(void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*int	main()
-{
-	char	s[] = "bonjour";
-	int		c = 'o';
-	size_t n = 7;
-}*/

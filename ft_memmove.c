@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:54 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/16 18:16:36 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:35:38 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (d);
 }
-
-/*int	main()
-{
-	char	src[50] = "xc3\xb8v\xc3\x\xa9d !\r\n";
-	char	dst[50];
-
-	ft_memmove(dst, src, 5);
-	printf("%s", dst);
-}*/

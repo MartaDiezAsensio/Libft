@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:46 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 15:26:29 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:37:12 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ char	*ft_strjoin(char const *s1, char *s2)
 	str[i] = '\0';
 	return (str);
 }
-
-/*int	main()
-{
-	char s1[] = "hello";
-	char s2[] = " bye";
-
-	printf("%s", ft_strjoin(s1, s2));
-}*/

@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:04 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 15:12:06 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:37:43 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-/*int	main()
-{
-	char	s[] = "hello";
-
-	ft_strmapi(s, printnstr);
-}*/

@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:44 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 15:00:33 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:35:31 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (*str1 - *str2);
 }
-
-/*int main()
-{
-    char    s1[] = "zyxbcdefgh";
-    char    s2[] = "abcdefgxyz";
-	int		n = 0;
-
-    printf("%d\n", ft_memcmp(s1, s2, n));
-	printf("%d\n", memcmp(s1, s2, n));	
-}*/

@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:22:28 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/16 22:36:48 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:38:32 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[j] = '\0';
 	return (str);
 }
-
-/*int	main()
-{
-	char s[] = "lorem ipsum dolor sit amet";
-	unsigned int start = 0;
-	size_t len = 10;
-	printf("%s", ft_substr(s, start, len));
-}*/

@@ -6,56 +6,11 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/16 18:31:06 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:36:14 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// size_t	ft_strlen(const char *s)
-// {
-// 	size_t i;
-
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 		i++;
-// 	return (i);
-// }
-
-// size_t	ft_strlcpy(char *dst, const char *src, int dstsize)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while ((i < (dstsize - 1)) && (src[i] != '\0'))
-// 	{
-// 		dst[i] = src[i];
-// 		i++;
-// 	}
-// 	if (i < dstsize)
-// 		dst[i] = '\0';
-// 	return (ft_strlen(src));
-// }
-
-// char	*ft_substr(char const *s, unsigned int start, size_t len)
-// {
-// 	char	*str;
-
-// 	str = NULL;
-// 	if (!s)
-// 		return (0);
-// 	if (ft_strlen(s) < start)
-// 		len = 0;
-// 	if (ft_strlen(s + start) < len)
-// 		len = (ft_strlen(s + start));
-// 	str = (char *)malloc((len + 1) * sizeof(char));
-// 	if (str == NULL)
-// 		return (0);
-// 	ft_strlcpy(str, s + start, len + 1);
-// 	return (str);
-// }
-
-/********************************************************/
 
 static int	count_rows(const char *str, char c)
 {
@@ -126,18 +81,3 @@ char	**ft_split(char const *str, char c)
 	arr[j] = 0;
 	return (arr);
 }
-
-// int main()
-// {
-//   char  *str = "Hola que tal";
-//   char  c = ' ';
-
-//   char	**arr = ft_split(str, c);
-//   int i = 0;
-
-//   while (i < count_rows(str, c))
-//   {
-// 	printf("%s\n", arr[i]);
-// 	i++;
-//   }
-// }

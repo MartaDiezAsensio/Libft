@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:19 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/08 11:24:28 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:34:50 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-/*int	main()
-{
-	int	i;
-	
-	i = 128;
-    while (i <= 138)
-    {
-        printf("%d", ft_isascii(i));
-        i++;
-    }
-}*/

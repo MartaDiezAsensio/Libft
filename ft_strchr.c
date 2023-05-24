@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:30 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/15 22:01:46 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:36:18 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-/*int	main()
-{
-	char	s[] = "dfdgg";
-	int		c = '\0';
-	printf("%s\n", ft_strchr(s, c));
-	printf("%s", strchr(s, c));
-}*/

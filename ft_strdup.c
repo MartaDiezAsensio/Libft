@@ -6,21 +6,11 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:21:36 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 15:18:24 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:36:33 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*size_t	ft_strlen(const char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}*/
 
 static char	*ft_strcpy(char *dst, char *src)
 {
@@ -46,10 +36,3 @@ char	*ft_strdup(char *s1)
 	ft_strcpy(ptr, s1);
 	return (ptr);
 }
-
-/*int	main()
-{
-	char	str[] = "lorem ipsum dolor sit amet";
-
-	printf("%s", ft_strdup(str));
-}*/

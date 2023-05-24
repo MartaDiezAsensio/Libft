@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:19:51 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/09 19:47:58 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:34:32 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-
-/*int main()
-{
-	char	num[] = "\t\n\r\v\f  469 \n";
-
-	printf("%d\n", ft_atoi(num));
-	printf("%d\n", atoi(num));
-}*/

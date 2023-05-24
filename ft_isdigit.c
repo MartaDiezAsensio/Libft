@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:20:23 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/10 15:17:44 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:34:54 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,3 @@ int	ft_isdigit(int c)
 	}
 	return (res);
 }
-
-/*int	main()
-{
-	int i = '0';
-    while (i <= '9')
-    {
-        printf("%d", ft_isdigit(i));
-        i++;
-    }
-}*/
