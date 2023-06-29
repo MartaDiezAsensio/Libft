@@ -6,17 +6,17 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 19:24:34 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/16 19:01:08 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/29 16:55:25 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+s_list	*ft_lstnew(void *content)
 {
-	t_list	*res;
+	s_list	*res;
 
-	res = (t_list *)malloc(sizeof(*res));
+	res = (s_list *)malloc(sizeof(*res));
 	if (!(res))
 		return (NULL);
 	res->content = content;
